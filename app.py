@@ -5,7 +5,7 @@ import PyPDF2
 import os
 from dotenv import load_dotenv
 load_dotenv()
-api_key = os.environ['GROQ_API_KEY']
+api_key = os.environ.get('GROQ_API_KEY')
 
 from langchain_groq import ChatGroq
 llm=ChatGroq(model="llama-3.1-70b-versatile")
